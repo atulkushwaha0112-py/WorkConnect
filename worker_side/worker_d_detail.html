@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details | WorkConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="worker_d_detail.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <button class="back-btn" onclick="history.back()">←</button>
+        <span class="page-title">Job #1024 Details</span>
+    </nav>
+
+    <div class="container" id="job-container">
+        </div>
+
+    <div class="mobile-action-bar">
+        <button class="btn btn-primary" onclick="acceptJob()">Start • ₹800</button>
+    </div>
+
+    <script>
+        // Mock Data
+        const jobData = {
+            id: 1024,
+            title: "Construction Helper Needed",
+            location: "Rohini Sector 13, Delhi",
+            pay: 800,
+            type: "Daily Wage",
+            isUrgent: true,
+            timings: "9:00 AM - 5:00 PM",
+            date: "Today, 10 Oct",
+            description: "We are looking for a hardworking helper for shifting construction materials (bricks and cement bags) from the ground floor to the 2nd floor. Lunch will be provided.",
+            requirements: [
+                "Must be physically fit to lift weights.",
+                "Must carry Aadhar Card for entry.",
+                "No smoking allowed inside the premises.",
+                "Gloves will be provided."
+            ],
+            employer: {
+                name: "Vikram Singh",
+                img: "https://ui-avatars.com/api/?name=Vikram+Singh&background=0D8ABC&color=fff",
+                rating: 4.9,
+                verified: true
+            },
+            address: "Plot No. 45, Near Mother Dairy, Sector 13, Rohini, New Delhi - 110085",
+            mapImage: "https://via.placeholder.com/600x400?text=Map+View+Here" // Replace with real map API image if available
+        };
+
+        function renderJob() {
+            const container = document.getElementById('job-container');
+            
+            container.innerHTML = `
+                <div class="main-content">
+                    <div class="main-card">
+                        <div class="job-header">
+                            <div class="badges">
+                                <span class="badge badge-type">${jobData.type}</span>
+                                ${jobData.isUrgent ? '<span class="badge badge-urgent">🔥 Urgent</span>' : ''}
+                            </div>
+                            <h1 class="job-title">${jobData.title}</h1>
+                            <div class="job-price">₹ ${jobData.pay} <span>/ day</span></div>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">📍 Location</span>
+                                <span class="info-value">Rohini, Delhi</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">🕒 Timings</span>
+                                <span class="info-value">${jobData.timings}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">📅 Date</span>
+                                <span class="info-value">${jobData.date}</span>
+                            </div>
+                        </div>
+
+                        <h3 class="section-title">Job Description</h3>
+                        <p class="description-text">${jobData.description}</p>
+
+                        <h3 class="section-title">Requirements & Tools</h3>
+                        <ul class="checklist">
+                            ${jobData.requirements.map(req => `<li>${req}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    
+                    <div class="side-card">
+                        <div class="employer-header">
+                            <img src="${jobData.employer.img}" alt="Emp" class="employer-img">
+                            <div>
+                                <div class="employer-name">${jobData.employer.name}</div>
+                                <div class="rating-box">⭐ ${jobData.employer.rating} Rating</div>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            🛡️ <span>Phone Verified & <br>Payment Verified</span>
+                        </div>
+                        <div class="action-area desktop-action">
+                             <button class="btn btn-primary" onclick="acceptJob()">Start Job</button>
+                        </div>
+                    </div>
+
+                    <div class="side-card">
+                        <h3 class="section-title" style="font-size:1rem;">Work Location</h3>
+                        
+                        <div class="map-container">
+                            <button class="map-overlay-btn" onclick="openMaps()">
+                                🗺️ Get Directions
+                            </button>
+                        </div>
+
+                        <div class="address-text">
+                            <span>📍</span>
+                            <span>${jobData.address}</span>
+                        </div>
+                    </div>
+
+                </aside>
+            `;
+        }
+
+        // Actions
+        function acceptJob() {
+            // Add animation or API call here
+            const btn = document.querySelector('.btn-primary');
+            btn.innerHTML = "✅ Started";
+            btn.style.backgroundColor = "var(--success)";
+            setTimeout(() => {
+                alert("Job Started! The employer has been notified.");
+            }, 500);
+        }
+
+        function openMaps() {
+            // Opens Google Maps with the address
+            const query = encodeURIComponent(jobData.address);
+            window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, '_blank');
+        }
+
+        // Initial Render
+        renderJob();
+    </script>
+</body>
+</html>

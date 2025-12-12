@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KaamSetu | Worker Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="worker_d.css" />
+  </head>
+  <body>
+
+
+    
+
+
+
+
+
+
+    <nav class="sidebar">
+      <a href="../index.html" style="text-decoration: none;">
+    <div class="logo">WorkConnect</div>
+</a>
+      <div class="nav-item active" onclick="showSection('dashboard')">
+        <span>🏠</span> <span>Dashboard</span>
+      </div>
+      <div class="nav-item" onclick="showSection('jobs')">
+        <span>🔍</span> <span>Find Work</span>
+      </div>
+      <div class="nav-item" onclick="showSection('transactions')">
+        <span>💰</span> <span>Transactions</span>
+      </div>
+      <div class="nav-item" onclick="showSection('reviews')">
+        <span>⭐</span> <span>Reviews</span>
+      </div>
+      <div
+        style="
+          margin-top: auto;
+          padding: 15px;
+          background: #f8fafc;
+          border-radius: 12px;
+        "
+      >
+        <p style="font-size: 0.8rem; color: #94a3b8">Support ID: 8821</p>
+        <p style="font-size: 0.8rem; font-weight: 600; color: var(--primary)">
+          Need Help?
+        </p>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <header class="header">
+        <div>
+          <h1 style="font-size: 2.2rem; margin-bottom: 5px">
+            Namaste, Rajesh Ji! 🙏
+          </h1>
+          <p style="color: var(--text-gray); font-size: 1.05rem">
+            Here is what's happening today.
+          </p>
+        </div>
+        <div class="user-profile">
+          <div class="avatar">R</div>
+          <div>
+            <div
+              style="
+                font-weight: 700;
+                font-size: 1.1rem;
+                display: flex;
+                align-items: center;
+              "
+            >
+              Rajesh Kumar
+              <span class="verification-badge">✓ Verified</span>
+            </div>
+            <div
+              style="
+                font-size: 0.85rem;
+                color: var(--success);
+                font-weight: 500;
+                margin-top: 2px;
+              "
+            >
+              ● Online & Available
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div id="content-area"></div>
+    </main>
+
+    <script>
+      // --- DATA SIMULATION ---
+
+      const workerData = {
+        name: "Rajesh Kumar",
+        wallet: 4500,
+        jobsDone: 24,
+        rating: 4.8,
+      };
+
+      const activeJobs = [
+        {
+          id: 101,
+          title: "Paint Work (Putti & Primer)",
+          loc: "Sector 18, Noida",
+          pay: 850,
+          dist: "2.5 km",
+          time: "4-6 Hours",
+          mapUrl:
+            "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/02/google-maps-2961754.jpg?tf=3840x",
+          status: "In Progress",
+        },
+      ];
+
+      const jobFeed = [
+        {
+          id: 1,
+          title: "Construction Helper",
+          loc: "Rohini Sec 13, Delhi",
+          pay: 600,
+          type: "Labour",
+          dist: "4.1 km",
+          time: "8 Hours",
+          mapUrl:
+            "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/02/google-maps-2961754.jpg?tf=3840x",
+          desc: "Bricks shifting and cement mixing required for 1st floor.",
+        },
+        {
+          id: 2,
+          title: "Deep House Cleaning",
+          loc: "DLF Phase 3, Gurgaon",
+          pay: 500,
+          type: "Cleaning",
+          dist: "8.2 km",
+          time: "5 Hours",
+          mapUrl:
+            "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/02/google-maps-2961754.jpg?tf=3840x",
+          desc: "Full 3BHK cleaning required. Diwali cleaning special.",
+        },
+        {
+          id: 3,
+          title: "Plumber Assistant",
+          loc: "Karol Bagh, Delhi",
+          pay: 750,
+          type: "Skilled",
+          dist: "1.2 km",
+          time: "Full Day",
+          mapUrl:
+            "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/02/google-maps-2961754.jpg?tf=3840x",
+          desc: "Pipe fitting help needed for commercial building.",
+        },
+      ];
+
+      const transactions = [
+        {
+          id: 1,
+          title: "Garden Cleaning",
+          date: "Yesterday, 4:30 PM",
+          amount: 450,
+          type: "cr",
+        },
+        {
+          id: 2,
+          title: "Shop Whitewash",
+          date: "07 Dec 2023",
+          amount: 1200,
+          type: "cr",
+        },
+        {
+          id: 3,
+          title: "Withdrawal to Paytm",
+          date: "05 Dec 2023",
+          amount: -2000,
+          type: "dr",
+        },
+        {
+          id: 4,
+          title: "Debris Removal",
+          date: "04 Dec 2023",
+          amount: 600,
+          type: "cr",
+        },
+      ];
+
+      const reviews = [
+        {
+          user: "Amit Sharma",
+          text: "Rajesh ji bahot mehnat se kaam karte hain. Time pe aaye thay.",
+          stars: 5,
+        },
+        {
+          user: "Priya Malhotra",
+          text: "Good work, but took a little extra time.",
+          stars: 4,
+        },
+        {
+          user: "Vikas Dubey",
+          text: "Very polite and professional. Recommended.",
+          stars: 5,
+        },
+      ];
+
+      // --- RENDER FUNCTIONS ---
+
+      function init() {
+        showSection("dashboard");
+      }
+
+      function showSection(section) {
+        const container = document.getElementById("content-area");
+        const navItems = document.querySelectorAll(".nav-item");
+
+        navItems.forEach((item) => item.classList.remove("active"));
+        if (section === "dashboard") navItems[0].classList.add("active");
+        if (section === "jobs") navItems[1].classList.add("active");
+        if (section === "transactions") navItems[2].classList.add("active");
+        if (section === "reviews") navItems[3].classList.add("active");
+
+        container.innerHTML = ""; // Clear content
+        container.style.opacity = 0;
+
+        setTimeout(() => {
+          if (section === "dashboard") renderDashboard(container);
+          else if (section === "jobs") renderJobFeed(container);
+          else if (section === "transactions") renderTransactions(container);
+          else if (section === "reviews") renderReviews(container);
+
+          container.style.transition = "opacity 0.4s";
+          container.style.opacity = 1;
+        }, 100);
+      }
+
+      // 1. DASHBOARD VIEW
+      function renderDashboard(container) {
+        let html = `
+                <div class="stats-grid">
+                    <div class="stat-card wallet">
+                        <div class="stat-label">Total Earnings</div>
+                        <div class="stat-value">₹ ${workerData.wallet}</div>
+                        <div style="font-size:0.8rem; color:#10B981; margin-top:5px;">▲ 12% from last week</div>
+                    </div>
+                    <div class="stat-card jobs">
+                        <div class="stat-label">Jobs Completed</div>
+                        <div class="stat-value">${workerData.jobsDone}</div>
+                    </div>
+                    <div class="stat-card rating">
+                        <div class="stat-label">My Rating</div>
+                        <div class="stat-value">${workerData.rating} ★</div>
+                        <div style="font-size:0.8rem; color:#64748b; margin-top:5px;">Based on 18 reviews</div>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <div>
+                        <h2>⚠️ Current Active Job</h2>
+                        <p style="color:var(--text-gray); font-size:0.9rem;">You are currently clocked in.</p>
+                    </div>
+                </div>
+                
+                <div class="card-container" style="margin-bottom: 50px; grid-template-columns: 1fr;">
+                    ${activeJobs
+                      .map(
+                        (job) => `
+                        <div class="job-card" style="border: 2px solid var(--primary); flex-direction: row; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 300px;">
+                                <div class="map-container" style="height: 100%; min-height: 250px; background-image: url('${job.mapUrl}');">
+                                    <div class="distance-badge">📍 Live Tracking</div>
+                                </div>
+                            </div>
+                            <div class="job-content" style="flex: 1; min-width: 300px;">
+                                <div class="job-tag" style="background: #eef2ff; color: var(--primary);">In Progress</div>
+                                <h3 class="job-title" style="font-size: 1.5rem;">${job.title}</h3>
+                                <div class="job-loc" style="font-size: 1.1rem;">📍 ${job.loc}</div>
+                                
+                                <div class="job-meta">
+                                    <div class="meta-item">
+                                        <span class="meta-label">PAY</span>
+                                        <span class="meta-val" style="color: var(--primary);">₹${job.pay}</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">DISTANCE</span>
+                                        <span class="meta-val">${job.dist}</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">EST. TIME</span>
+                                        <span class="meta-val">${job.time}</span>
+                                    </div>
+                                </div>
+
+                                <div class="btn-group">
+                                    <button class="btn btn-outline" onclick="alert('Calling Customer...')">📞 Call Customer</button>
+                                    <button class="btn btn-primary" onclick="alert('Marked as Complete! Money added.')">✅ Mark Complete</button>
+                                </div>
+                            </div>
+                        </div>
+                    `
+                      )
+                      .join("")}
+                </div>
+
+                <div class="section-header">
+                    <h2>📅 Upcoming Opportunities</h2>
+                    <span style="color: var(--primary); cursor: pointer; font-weight: 600;" onclick="showSection('jobs')">See All Jobs →</span>
+                </div>
+                <div class="card-container">
+                    ${jobFeed.slice(0, 2).map(getJobCardHTML).join("")}
+                </div>
+            `;
+        container.innerHTML = html;
+      }
+
+      // 2. JOB FEED VIEW
+      function renderJobFeed(container) {
+        let html = `
+                <div class="section-header">
+                    <div>
+                        <h2>🔍 Find Work Near You</h2>
+                        <p style="color:var(--text-gray);">Jobs within 10km radius</p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    ${jobFeed.map(getJobCardHTML).join("")}
+                </div>
+            `;
+        container.innerHTML = html;
+      }
+
+      function getJobCardHTML(job) {
+        return `
+                <div class="job-card">
+                    <div class="map-container" style="background-image: url('${job.mapUrl}')">
+                        <div class="distance-badge">🚲 ${job.dist} away</div>
+                    </div>
+                    <div class="job-content">
+                        <div class="job-tag">${job.type}</div>
+                        <h3 class="job-title">${job.title}</h3>
+                        <div class="job-loc">📍 ${job.loc}</div>
+                        
+                        <div class="job-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">DURATION</span>
+                                <span class="meta-val">${job.time}</span>
+                            </div>
+                             <div class="meta-item">
+                                <span class="meta-label">RATE</span>
+                                <span class="meta-val">Fixed</span>
+                            </div>
+                        </div>
+
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px; line-height: 1.5;">${job.desc}</p>
+                        
+                        <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+                            <div>
+                                <span style="font-size: 0.8rem; color: #94a3b8;">You will earn</span>
+                                <div class="job-pay">₹ ${job.pay}</div>
+                            </div>
+                           <button class="btn btn-primary" style="width: auto; padding: 10px 25px;">
+  <a href="worker_d_detail.html" style="color: white; text-decoration: none;">
+    More Details
+  </a>
+</button>
+
+                        </div>
+                    </div>
+                </div>
+            `;
+      }
+
+      // 3. TRANSACTIONS VIEW
+      function renderTransactions(container) {
+        let html = `
+                <div class="section-header">
+                    <h2>💰 Transaction History</h2>
+                </div>
+                <div class="transaction-list">
+                    ${transactions
+                      .map(
+                        (t) => `
+                        <div class="trans-item">
+                            <div style="display:flex; align-items:center;">
+                                <div class="trans-icon ${
+                                  t.type === "dr"
+                                    ? "bg-red-light"
+                                    : "bg-green-light"
+                                }">
+                                    ${t.type === "dr" ? "↗" : "↙"}
+                                </div>
+                                <div>
+                                    <h4 style="font-weight:600; font-size:1rem;">${
+                                      t.title
+                                    }</h4>
+                                    <p style="font-size:0.85rem; color:var(--text-gray);">${
+                                      t.date
+                                    }</p>
+                                </div>
+                            </div>
+                            <div style="font-weight: 700; color: ${
+                              t.type === "dr" ? "#ef4444" : "#10b981"
+                            }; font-size: 1.1rem;">
+                                ${t.type === "dr" ? "-" : "+"} ₹${Math.abs(
+                          t.amount
+                        )}
+                            </div>
+                        </div>
+                    `
+                      )
+                      .join("")}
+                </div>
+            `;
+        container.innerHTML = html;
+      }
+
+      // 4. REVIEWS VIEW
+      function renderReviews(container) {
+        let html = `
+                <div class="section-header">
+                    <h2>⭐ What Employers Say</h2>
+                </div>
+                <div style="max-width: 900px; display: grid; gap: 20px;">
+                    ${reviews
+                      .map(
+                        (r) => `
+                        <div style="background:white; padding:25px; border-radius:16px; border-left:5px solid var(--accent); box-shadow:var(--shadow);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                <strong style="font-size: 1.1rem;">${
+                                  r.user
+                                }</strong>
+                                <span style="color: var(--accent); letter-spacing: 2px;">${"★".repeat(
+                                  r.stars
+                                )}<span style="color:#ddd;">${"★".repeat(
+                          5 - r.stars
+                        )}</span></span>
+                            </div>
+                            <p style="color: #475569; font-style: italic;">"${
+                              r.text
+                            }"</p>
+                        </div>
+                    `
+                      )
+                      .join("")}
+                </div>
+            `;
+        container.innerHTML = html;
+      }
+
+      // --- INTERACTION ---
+      function acceptJob(title) {
+        alert(
+          `Success! You have accepted: ${title}. \nNavigating to map location...`
+        );
+      }
+
+      // Start
+      init();
+    </script>
+  </body>
+</html>
