@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="print.css">
+</head>
+<body>
+
+
+
+<nav style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2c3e50;
+    color: white;
+    z-index: 1000;
+    box-sizing: border-box;
+">
+    <!-- Logo -->
+    <div style="
+        font-family: 'Alfa Slab One', serif;
+        font-size: 20px;
+        white-space: nowrap;
+        flex-shrink: 1;
+    ">
+      WorkConnect
+    </div>
+
+    <!-- Links -->
+    <div style="
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        flex-shrink: 1;
+    ">
+        <a href="../../../index.html" 
+           style="color:white; text-decoration:none; font-size:15px;">
+            Home
+        </a>
+
+        <a href="../../../index.html#services" 
+           style="color:white; text-decoration:none; font-size:15px;">
+            Services
+        </a>
+
+        <a href="../../../index.html#contact" 
+           style="color:white; text-decoration:none; font-size:15px;">
+            Contact Us
+        </a>
+    </div>
+</nav>
+
+
+
+
+
+
+    <div class="main-container">
+        
+        <div class="header-content">
+            <h1>Thank you!</h1>
+            <p>The worker will contact you soon.</p>
+        </div>
+
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3h0Z3I3eGZ3eXh0Z3I3eGZ3eXh0Z3I3eGZ3eXh0Z3I3eGZ3eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/tf9jjMcO77YzV4YPwE/giphy.gif" alt="Success" class="status-gif">
+
+        <div class="wrapper">
+            <div class="printer"></div>
+
+            <div class="printer-display">
+                <span class="printer-message">Click to print</span>
+                <div class="letter-wrapper">
+                    <span class="letter">P</span><span class="letter">r</span><span class="letter">i</span><span class="letter">n</span><span class="letter">t</span><span class="letter">i</span><span class="letter">n</span><span class="letter">g</span><span class="letter">.</span><span class="letter">.</span><span class="letter">.</span>
+                </div>
+            </div>
+
+            <button class="print-button">🖨</button>
+
+            <div class="receipt-wrapper">
+                <div class="receipt">
+                    <div class="receipt-header">
+                        KaamSetu<br />
+                        Booking Confirmed<br />
+                        <div class="logo">✅</div>
+                    </div>
+                    <div class="receipt-subheader">
+                        Order #001234 <br />
+                        11-12-2025 <br>
+                        Electrician-Amit Chauhan<br>
+                        Worker ID - ELC56789
+    
+                        
+                    </div>
+                    <table class="receipt-table">
+                        <tbody>
+                            <tr><th>Service</th><th>Fee</th></tr>
+                            <tr><td>Labor Service Charge</td><td>100.00</td></tr>
+                            <tr><td>Service Platform Fee</td><td>10.00</td></tr>
+                            <tr><td>Transportation Fee</td><td>20.00</td></tr>
+                            <tr><td>Promotional Discount</td><td>-20</td></tr>
+                            <tr><td>Area-Based Surcharge</td><td>10.00</td></tr>
+
+
+
+                            <tr class="receipt-subtotal"><td colspan="2">---------------</td></tr>
+                            <tr class="receipt-total"><td>Total</td><td>120.00</td></tr>
+                        </tbody>
+                    </table>
+                        <div class="receipt-message">Thank you for choosing our service! We look forward to assisting you again soon.</div>
+                        <div class="receipt-message">See you soon!</div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
