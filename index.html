@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorkConnect - Find Skilled Daily Wage Workers</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">Work<span>Connect</span></div>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#workers">Top Workers</a></li>
+            <li><a href="#rev-unique-section">Reviews</a></li>
+            <li>
+              <a
+                href="#contact"
+                class="btn btn-primary"
+                style="padding: 8px 20px"
+                >Join Now</a
+              >
+            </li>
+          </ul>
+          <div class="mobile-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <h1>
+          Find Reliable And Affordable <br /><span class="typing-text"></span>
+        </h1>
+        <p>
+          Connecting skilled masons, painters, electricians, and more with
+          homeowners and contractors. Fast, secure, and reliable.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding" id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Our Services</h2>
+          <p>We provide a wide range of skilled labor for your daily needs</p>
+        </div>
+
+        <div id="kinetic-grid-container">
+          <div class="nebula-card-item reveal">
+            <div class="service-icon"><i class="fas fa-hammer"></i></div>
+            <h3>Carpentry</h3>
+            <p>
+              Expert carpenters for furniture repair, making, and woodworks.
+            </p>
+            <a href="#" class="service-link"
+              >Find Carpenters <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="nebula-card-item reveal">
+            <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+            <h3>Painting</h3>
+            <p>
+              Interior and exterior painting services for homes and offices.
+            </p>
+            <a href="#" class="service-link"
+              >Find Painters <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="nebula-card-item reveal">
+            <div class="service-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Electrical</h3>
+            <p>
+              Certified electricians for wiring, repairs, and installations.
+            </p>
+            <a href="category/electrician_index.html" class="service-link"
+              >Find Electricians <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="nebula-card-item reveal">
+            <div class="service-icon"><i class="fas fa-trowel-bricks"></i></div>
+            <h3>Masonry</h3>
+            <p>Skilled masons for construction, tiling, and brickwork.</p>
+            <a href="#" class="service-link"
+              >Find Masons <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="nebula-card-item reveal">
+            <div class="service-icon"><i class="fas fa-broom"></i></div>
+            <h3>Cleaning</h3>
+            <p>Deep cleaning services for residential and commercial spaces.</p>
+            <a href="#" class="service-link"
+              >Find Cleaners <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="nebula-card-item reveal">
+            <div class="service-icon"><i class="fas fa-wrench"></i></div>
+            <h3>Plumbing</h3>
+            <p>
+              Quick fix for leaks, pipe fittings, and sanitary installations.
+            </p>
+            <a href="#" class="service-link"
+              >Find Plumbers <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="unique-services-section">
+      <div class="unique-services-header">
+        <h2 style="text-align: center;">Our Expansions</h2>
+        
+      </div>
+      <div class="unique-scroll-wrapper">
+        <div class="unique-scroll-track-left">
+          <div class="unique-scroll-item">Indirapuram</div>
+          <div class="unique-scroll-item">Vaishali</div>
+          <div class="unique-scroll-item">Raj Nagar</div>
+          <div class="unique-scroll-item">Pratap Vihar</div>
+          <div class="unique-scroll-item">Lohia Nagar</div>
+          <div class="unique-scroll-item">Kavi Nagar</div>
+          <div class="unique-scroll-item">Hindon</div>
+          <div class="unique-scroll-item">Indirapuram</div>
+          <div class="unique-scroll-item">Vaishali</div>
+          <div class="unique-scroll-item">Raj Nagar</div>
+          <div class="unique-scroll-item">Gazipur</div>
+          <div class="unique-scroll-item">Kaushambi</div>
+          <div class="unique-scroll-item">Dugri</div>
+          <div class="unique-scroll-item">Rajendra Nagar</div>
+          <div class="unique-scroll-item">Mohan Nagar</div>
+          <div class="unique-scroll-item">Shyam Park</div>
+          <div class="unique-scroll-item">Ahinsa Khand</div>
+          <div class="unique-scroll-item">Gazipur</div>
+          <div class="unique-scroll-item">Kaushambi</div>
+          <div class="unique-scroll-item">Dugri</div>
+        </div>
+      </div>
+      <div class="unique-scroll-wrapper">
+        <div class="unique-scroll-track-right">
+          <div class="unique-scroll-item">Gazipur</div>
+          <div class="unique-scroll-item">Kaushambi</div>
+          <div class="unique-scroll-item">Dugri</div>
+          <div class="unique-scroll-item">Rajendra Nagar</div>
+          <div class="unique-scroll-item">Mohan Nagar</div>
+          <div class="unique-scroll-item">Shyam Park</div>
+          <div class="unique-scroll-item">Ahinsa Khand</div>
+          <div class="unique-scroll-item">Gazipur</div>
+          <div class="unique-scroll-item">Kaushambi</div>
+          <div class="unique-scroll-item">Dugri</div>
+          <div class="unique-scroll-item">Gazipur</div>
+          <div class="unique-scroll-item">Kaushambi</div>
+          <div class="unique-scroll-item">Dugri</div>
+          <div class="unique-scroll-item">Rajendra Nagar</div>
+          <div class="unique-scroll-item">Mohan Nagar</div>
+          <div class="unique-scroll-item">Shyam Park</div>
+          <div class="unique-scroll-item">Ahinsa Khand</div>
+          <div class="unique-scroll-item">Gazipur</div>
+          <div class="unique-scroll-item">Kaushambi</div>
+          <div class="unique-scroll-item">Dugri</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="section-header-stats reveal">
+        <h2>Achievements</h2>
+        <!-- <p>Milestones that show our dedication to quality service</p> -->
+      </div>
+      <div class="card reveal">
+        <div class="item item--1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="rgba(149,149,255,1)"
+          >
+            <path
+              d="M12 11a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7z"
+            ></path>
+          </svg>
+          <span class="quantity"> 12k+ </span>
+          <span class="text"> Users </span>
+        </div>
+        <div class="item item--2">
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="rgba(252,161,71,1)"
+          >
+            <path
+              d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+            ></path>
+          </svg>
+          <span class="quantity"> 50+ </span>
+          <span class="text"> Services </span>
+        </div>
+        <div class="item item--3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="rgba(66,193,110,1)"
+          >
+            <path
+              d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 10h2v2h-2v-2zm0-3h2v2h-2V7z"
+            ></path>
+          </svg>
+          <span class="quantity"> 98% </span>
+          <span class="text"> Feedback </span>
+        </div>
+        <div class="item item--4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="rgba(220,91,183,1)"
+          >
+            <path
+              d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z"
+            ></path>
+          </svg>
+          <span class="quantity"> 300+ </span>
+          <span class="text"> Projects </span>
+        </div>
+        <div class="item item--5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="rgba(130, 160, 80, 1)"
+          >
+            <path
+              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            ></path>
+          </svg>
+          <span class="quantity"> 15 </span>
+          <span class="text"> Awards </span>
+        </div>
+        <div class="item item--6">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="rgba(200, 100, 190, 1)"
+          >
+            <path
+              d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm-2 2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5 6H4v8h16v-8z"
+            ></path>
+          </svg>
+          <span class="quantity"> 10+ </span>
+          <span class="text"> Years </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding workers-section" id="workers">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Top Workers</h2>
+          <p>Highly rated professionals ready to work</p>
+        </div>
+
+        <div class="workers-grid">
+          <div class="worker-card-container reveal">
+            <div class="worker-card-inner">
+              <div class="worker-card-front">
+                <div class="worker-img-container">
+                  <img
+                    src="https://blogger.googleusercontent.com/img/a/AVvXsEgWCuqEuFDWDyt0ALQPsUfd_4wPQ6GxuUS36cn60nOrQ9YOxVpe3DZfi3DFrEVCyhN8dptDw0AtsKvrRzUJZZmESViVSEi9x7W-yPw3iFOkHXagV-pjG3wGbWTIsS7254qxqO9NYJ8j4zyde1l_ZdP5I1ocMi6e5JlAb4u56EWjTLbLnSzmCOwszwBu1w20"
+                    alt="Worker"
+                  />
+                  <div class="img-overlay"></div>
+                </div>
+                <div class="worker-details">
+                  <div class="worker-header">
+                    <div class="worker-name">
+                      <h3>Rakesh Kumar</h3>
+                      <span class="worker-role">Senior Electrician</span>
+                    </div>
+                    <div class="rating"><i class="fas fa-star"></i> 4.8</div>
+                  </div>
+                  <div class="worker-stats">
+                    <div class="stat-item">
+                      <span class="stat-value">7 Yrs</span
+                      ><span class="stat-label">Exp</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">120+</span
+                      ><span class="stat-label">Jobs</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">₹1500</span
+                      ><span class="stat-label">/Day</span>
+                    </div>
+                  </div>
+                  <button class="btn-w btn-outline">
+                    View Profile & Contact
+                  </button>
+                </div>
+              </div>
+              <div class="worker-card-back">
+                <div class="back-header">
+                  <h3>Contact Rakesh</h3>
+                  <p>Reliable and safe service.</p>
+                </div>
+                <button class="btn-primary-dark" onclick="location.href='category/Electrician/Rakesh Kumar.html'">
+                  <i class="fas fa-calendar-check"></i> Book Now
+                </button>
+                <button class="btn-text-light">
+                  <i class="fas fa-map-marker-alt"></i> New Delhi
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="worker-card-container reveal">
+            <div class="worker-card-inner">
+              <div class="worker-card-front">
+                <div class="worker-img-container">
+                  <img
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKC1AsxatKD72SjyR3-dexA2akam8N6IRT5DRe87mLaDrB_xmoVb8AL8zeCPpyqvuU2JWSBXLHBmM6EjJJj0cmTiKYDiijt0CJbd_wSC7Ez96QQO8H3uzuVqDCAbXAIAtqaKOfg1bu9uUOBYwR0LxXNhETCQ66DAPr7YT6wNliBmCqNZ7iGsoS-XlKUcan/s1024/carpenter1.jpg"
+                    alt="Worker"
+                  />
+                  <div class="img-overlay"></div>
+                </div>
+                <div class="worker-details">
+                  <div class="worker-header">
+                    <div class="worker-name">
+                      <h3>Karan Jaiswal</h3>
+                      <span class="worker-role">Carpenter</span>
+                    </div>
+                    <div class="rating"><i class="fas fa-star"></i> 4.3</div>
+                  </div>
+                  <div class="worker-stats">
+                    <div class="stat-item">
+                      <span class="stat-value">14 Yrs</span
+                      ><span class="stat-label">Exp</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">300+</span
+                      ><span class="stat-label">Jobs</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">₹1200</span
+                      ><span class="stat-label">/Day</span>
+                    </div>
+                  </div>
+                  <button class="btn-w btn-outline">
+                    View Profile & Contact
+                  </button>
+                </div>
+              </div>
+              <div class="worker-card-back">
+                <div class="back-header">
+                  <h3>Contact Karan</h3>
+                  <p>Quality craftsmanship.</p>
+                </div>
+                <button class="btn-primary-dark">
+                  <i class="fas fa-calendar-check" ></i> Book Now
+                </button>
+                <button class="btn-text-light">
+                  <i class="fas fa-map-marker-alt"></i> Noida
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="worker-card-container reveal">
+            <div class="worker-card-inner">
+              <div class="worker-card-front">
+                <div class="worker-img-container">
+                  <img
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4cHwj_72W5Yus-YgTMzEv-qJf-QkN-RYQgBQzd865Uep_3rEWzqUVvTrClnGYB5Ir9WqFnBFKeszV4t7Z_DWNu7MABSj6ejeoisWNQUvomNVTM3I6g3RvkZsAT5RkQo3i62LbSV88x-BU0JSb3q1xdFTPrP3WbwdZiDK3TWffdvUx7VjcAzMqQDqizHO6/s2816/Gemini_Generated_Image_p1h9jbp1h9jbp1h9%20(1).png"
+                    alt="Worker"
+                  />
+                  <div class="img-overlay"></div>
+                </div>
+                <div class="worker-details">
+                  <div class="worker-header">
+                    <div class="worker-name">
+                      <h3>Vishal Patil</h3>
+                      <span class="worker-role">Expert Electrician</span>
+                    </div>
+                    <div class="rating"><i class="fas fa-star"></i> 4.6</div>
+                  </div>
+                  <div class="worker-stats">
+                    <div class="stat-item">
+                      <span class="stat-value">12 Yrs</span
+                      ><span class="stat-label">Exp</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">85</span
+                      ><span class="stat-label">Jobs</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">₹2000</span
+                      ><span class="stat-label">/Day</span>
+                    </div>
+                  </div>
+                  <button class="btn-w btn-outline">
+                    View Profile & Contact
+                  </button>
+                </div>
+              </div>
+              <div class="worker-card-back">
+                <div class="back-header">
+                  <h3>Contact Vishal</h3>
+                  <p>Helpful approach.</p>
+                </div>
+                <button class="btn-primary-dark">
+                  <i class="fas fa-calendar-check"></i> Book Now
+                </button>
+                <button class="btn-text-light">
+                  <i class="fas fa-map-marker-alt"></i> Noida
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="overlay"></div>
+      <div class="container how-content">
+        <div class="section-header reveal">
+          <h2 style="color: white">Hire a worker in 3 simple steps</h2>
+          <!-- <p>Hire a worker in 3 simple steps</p> -->
+          <div class="header-line"></div>
+        </div>
+
+        <div class="steps-container">
+          <div class="step-box reveal">
+            <div class="step-number">01</div>
+            <div class="icon-box">
+              <i class="fa-solid fa-magnifying-glass-location"></i>
+            </div>
+            <h3>Search</h3>
+            <p>Enter your location and the type of work you need help with.</p>
+          </div>
+          <div class="step-box reveal">
+            <div class="step-number">02</div>
+            <div class="icon-box">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <h3>Compare</h3>
+            <p>Browse worker profiles, check reviews, experience, and rates.</p>
+          </div>
+          <div class="step-box reveal">
+            <div class="step-number">03</div>
+            <div class="icon-box"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Hire</h3>
+            <p>
+              Contact the worker directly or book through our platform
+              instantly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gallery-section">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.-PWC41If54sofvpyfvABugHaDt?w=295&h=175&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.L7j6Ps55OSdORKzwyvlE6AHaEJ?w=265&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.n9h2lwJ9mcpCVirFW-1m-QHaEK?w=292&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.xdnhETOBrThOUQW6SsSzowHaEH?w=285&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.7kRTLe93y1xYCt-vhKkZvAHaEK?w=287&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.t3kMo9qNP8AMUqmdW5qpWAHaDM?w=338&h=151&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.WfxAr5C8tnUZxOzJ6EU0RwHaE7?w=274&h=187&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://blogger.googleusercontent.com/img/a/AVvXsEgWCuqEuFDWDyt0ALQPsUfd_4wPQ6GxuUS36cn60nOrQ9YOxVpe3DZfi3DFrEVCyhN8dptDw0AtsKvrRzUJZZmESViVSEi9x7W-yPw3iFOkHXagV-pjG3wGbWTIsS7254qxqO9NYJ8j4zyde1l_ZdP5I1ocMi6e5JlAb4u56EWjTLbLnSzmCOwszwBu1w20"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.-PWC41If54sofvpyfvABugHaDt?w=295&h=175&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.L7j6Ps55OSdORKzwyvlE6AHaEJ?w=265&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.n9h2lwJ9mcpCVirFW-1m-QHaEK?w=292&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.xdnhETOBrThOUQW6SsSzowHaEH?w=285&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.7kRTLe93y1xYCt-vhKkZvAHaEK?w=287&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.t3kMo9qNP8AMUqmdW5qpWAHaDM?w=338&h=151&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.WfxAr5C8tnUZxOzJ6EU0RwHaE7?w=274&h=187&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+              alt="Work"
+            />
+          </div>
+          <div class="gallery-card">
+            <img
+              src="https://blogger.googleusercontent.com/img/a/AVvXsEgWCuqEuFDWDyt0ALQPsUfd_4wPQ6GxuUS36cn60nOrQ9YOxVpe3DZfi3DFrEVCyhN8dptDw0AtsKvrRzUJZZmESViVSEi9x7W-yPw3iFOkHXagV-pjG3wGbWTIsS7254qxqO9NYJ8j4zyde1l_ZdP5I1ocMi6e5JlAb4u56EWjTLbLnSzmCOwszwBu1w20"
+              alt="Work"
+            />
+          </div>
+          
+         
+          
+        </div>
+      </div>
+    </div>
+<section id="rev-unique-section">
+      <div class="rev-marquee-container">
+        <div class="rev-track">
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Outstanding service! I found a painter within 10 minutes."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">A</div>
+              <div class="rev-details">
+                <h4>Amit Patel</h4>
+                <span>Homeowner</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Very professional workers. The plumber fixed my leak instantly."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">S</div>
+              <div class="rev-details">
+                <h4>Sneha Sharma</h4>
+                <span>Contractor</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★☆</div>
+            <p class="rev-text">
+              "Great platform for daily wage workers. Easy to use."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">M</div>
+              <div class="rev-details">
+                <h4>Manoj Kumar</h4>
+                <span>Store Owner</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Highly recommended. Verified professionals only."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">J</div>
+              <div class="rev-details">
+                <h4>Jyoti Verma</h4>
+                <span>Architect</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Highly recommended. Verified professionals only."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">R</div>
+              <div class="rev-details">
+                <h4>Rahul Gupta</h4>
+                <span>Civil Engineer</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Highly recommended. Verified professionals only."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">P</div>
+              <div class="rev-details">
+                <h4>Priya Singh</h4>
+                <span>Interior Designer</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Highly recommended. Verified professionals only."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">V</div>
+              <div class="rev-details">
+                <h4>Vikram Reddy</h4>
+                <span>Contractor</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Highly recommended. Verified professionals only."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">N</div>
+              <div class="rev-details">
+                <h4>Neha Kapoor</h4>
+                <span>Homeowner</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Highly recommended. Verified professionals only."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">A</div>
+              <div class="rev-details">
+                <h4>Arjun Malhotra</h4>
+                <span>Architect</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Highly recommended. Verified professionals only."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">K</div>
+              <div class="rev-details">
+                <h4>Kavita Desai</h4>
+                <span>Store Owner</span>
+              </div>
+            </div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-rating">★★★★★</div>
+            <p class="rev-text">
+              "Highly recommended. Verified professionals only."
+            </p>
+            <div class="rev-user-area">
+              <div class="rev-avatar">R</div>
+              <div class="rev-details">
+                <h4>Rohan Das</h4>
+                <span>Builder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <h2>Are you a Skilled Worker?</h2>
+        <p style="margin-bottom: 25px">
+          Join thousands of workers getting daily jobs through our platform.
+        </p>
+
+        <button class="btn" onclick="location.href='worker_side/join_form.html'">Register as Worker</button>
+      </div>
+    </section>
+
+    <section class="social-section">
+      <div class="social-buttons">
+        <a href="#" class="social-btn" style="--color: #e1306c"
+          ><div class="light-holder">
+            <div class="dot"></div>
+            <div class="light"></div>
+          </div>
+          <div class="button-holder">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 3h1v4h-4V5h3zM12 9a3 3 0 110 6 3 3 0 010-6z"
+              />
+            </svg>
+            <p>Instagram</p>
+          </div></a
+        >
+        <a href="#" class="social-btn" style="--color: #0a66c2"
+          ><div class="light-holder">
+            <div class="dot"></div>
+            <div class="light"></div>
+          </div>
+          <div class="button-holder">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7 0h3.8v2.2h.1c.5-1 1.8-2.2 3.9-2.2 4.1 0 4.9 2.7 4.9 6.1V24h-4v-8.4c0-2 0-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.4V24h-4V8z"
+              />
+            </svg>
+            <p>LinkedIn</p>
+          </div></a
+        >
+        <a href="#" class="social-btn" style="--color: #1877f2"
+          ><div class="light-holder">
+            <div class="dot"></div>
+            <div class="light"></div>
+          </div>
+          <div class="button-holder">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+            <p>Facebook</p>
+          </div></a
+        >
+        <a href="#" class="social-btn" style="--color: #ff0000">
+          <div class="light-holder">
+            <div class="dot"></div>
+            <div class="light"></div>
+          </div>
+          <div class="button-holder">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M23.5 6.5s-.2-1.7-.8-2.4c-.8-.9-1.7-.9-2.1-1C16.9 3 12 3 12 3h-.1s-4.9 0-8.6.1c-.4.1-1.3.1-2.1 1-.6.7-.8 2.4-.8 2.4S0 8.3 0 10.2v1.6c0 1.9.2 3.7.2 3.7s.2 1.7.8 2.4c.8.9 1.9.9 2.4 1 1.7.2 7.3.2 7.3.2s4.9 0 8.6-.2c.4-.1 1.3-.1 2.1-1 .6-.7.8-2.4.8-2.4s.2-1.9.2-3.7V10.2c0-1.9-.2-3.7-.2-3.7zM9.6 14.6V8.7l6.4 2.9-6.4 3z"
+              />
+            </svg>
+            <p>YouTube</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <div class="logo" style="color: white">
+              Work<span>Connect</span>
+            </div>
+            <p style="margin-top: 15px; opacity: 0.8">
+              Connecting daily wage workers with opportunities, ensuring fair
+              pay and quality work.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#workers">Find Workers</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+              <li><i class="fas fa-envelope"></i> support@workconnect.com</li>
+              <li><i class="fas fa-phone"></i> +91 987 654 3210</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> KIET, Ghaziabad, UP, India
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 WorkConnect. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+
+      // Scroll Animation (Intersection Observer)
+      const revealElements = document.querySelectorAll(".reveal");
+      const revealOnScroll = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      revealElements.forEach((el) => revealOnScroll.observe(el));
+
+      // Hero Typing Animation
+      const textElement = document.querySelector(".typing-text");
+      const words = [
+        "Electricians",
+        "Carpenters",
+        "Painters",
+        "Plumbers",
+        "Laborers",
+        "Cleaners",
+        "Masons",
+        "Roofers",
+      ];
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeEffect() {
+        const currentWord = words[wordIndex];
+        if (isDeleting) {
+          textElement.textContent = currentWord.substring(0, charIndex--);
+        } else {
+          textElement.textContent = currentWord.substring(0, charIndex++);
+        }
+        let typeSpeed = isDeleting ? 100 : 200;
+        if (!isDeleting && charIndex === currentWord.length + 1) {
+          isDeleting = true;
+          typeSpeed = 2000;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex++;
+          typeSpeed = 500;
+        }
+        if (wordIndex === words.length) {
+          wordIndex = 0;
+        }
+        setTimeout(typeEffect, typeSpeed);
+      }
+      document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+  </body>
+</html>
