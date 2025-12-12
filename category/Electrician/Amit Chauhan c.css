@@ -1,0 +1,213 @@
+/* BACKGROUND COLOR*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: black;                
+    background: #ffffff;         
+}
+
+/* PAGE LAYOUT */
+.page-container {
+    width: 88%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* HEADINGS */
+.heading {
+    font-size: 28px;
+    color: black;              
+    margin-bottom: 15px;
+    text-shadow: none;
+}
+
+/* GLASS CARDS */
+.worker-card,
+.hire-card {
+    width: 48%;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 25px;
+    border-radius: 18px;
+    border: 2px solid #cccccc;
+    box-shadow: 0 0 15px #88888870;
+    backdrop-filter: blur(5px);
+    transition: 0.4s;
+}
+
+/* HOVER EFFECT */
+.worker-card:hover,
+.hire-card:hover {
+    box-shadow: 0 0 35px #888888;
+    transform: scale(1.02);
+}
+
+/* date input */
+.date-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* background color of date */
+.date-row input[type="date"] {
+    background: transparent;
+    border: 1px solid #888888;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: black;
+}
+
+/* Calendar icon */
+.date-row input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0);  /* black icon */
+    cursor: pointer;
+}
+
+/* FADE ANIMATION */
+.fade-slide {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* WORKER TOP SECTION */
+.worker-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.worker-photo {
+    width: 155px;
+    height: 155px;
+    border-radius: 12px;
+    border: 3px solid #888888;
+    object-fit: cover;
+    box-shadow: 0 0 12px #888888;
+}
+
+.worker-name h2 {
+    margin: 0;
+    font-size: 28px;
+    color: black;          
+    text-shadow: none;
+}
+
+.role {
+    color: #555555;        
+    font-size: 16px;
+}
+
+/* WORKER DETAIL BOX */
+.worker-details-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+    border: 1px solid #cccccc88;
+}
+
+.worker-details-box p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: black;
+}
+
+/* TEXTAREA */
+.hire-box textarea {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+    background: transparent;
+    border: 2px solid #888888;
+    border-radius: 12px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.hire-box textarea:focus {
+    width: 95%;
+}
+
+/* BUTTON */
+.hire-btn {
+    width: 60%;
+    padding: 15px;
+    margin: 25px auto;
+    display: block;
+    background:#ff9800;
+    color: black;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hire-btn:hover {
+    transform: scale(1.05);
+    background: #aaaaaa;
+    box-shadow: 0 0 20px #888888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .page-container {
+        flex-direction: column;
+    }
+    .worker-card,
+    .hire-card {
+        width: 100%;
+    }
+}
+
+/* instructions for user */
+.instruction-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.instruction-box {
+    width: 85%;
+    background: #ffffff;
+    color: #000;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-left: 6px solid #ff9800; /* you can change color */
+}
+
+.instruction-box h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.instruction-box ul {
+    margin-left: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
